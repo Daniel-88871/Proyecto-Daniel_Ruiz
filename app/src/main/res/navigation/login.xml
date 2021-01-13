@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    app:startDestination="@id/login2">
+
+    <activity
+        android:id="@+id/login2"
+        android:name="com.example.proyectodanielruiz.Login"
+        android:label="login"
+        tools:layout="@layout/login" />
+    <fragment
+        android:id="@+id/prelogin12"
+        android:name="com.example.proyectodanielruiz.prelogin1"
+        android:label="fragment_prelogin1"
+        tools:layout="@layout/fragment_prelogin1" >
+        <action
+            android:id="@+id/action_prelogin12_to_prelogin22"
+            app:destination="@id/prelogin22" />
+    </fragment>
+    <fragment
+        android:id="@+id/prelogin22"
+        android:name="com.example.proyectodanielruiz.prelogin2"
+        android:label="fragment_prelogin2"
+        tools:layout="@layout/fragment_prelogin2" >
+        <action
+            android:id="@+id/action_prelogin22_to_prelogin32"
+            app:destination="@id/prelogin32" />
+    </fragment>
+    <fragment
+        android:id="@+id/prelogin32"
+        android:name="com.example.proyectodanielruiz.prelogin3"
+        android:label="fragment_prelogin3"
+        tools:layout="@layout/fragment_prelogin3" >
+        <action
+            android:id="@+id/action_prelogin32_to_login2"
+            app:destination="@id/login2" />
+    </fragment>
+</navigation>
